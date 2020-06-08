@@ -1,0 +1,19 @@
+﻿{% extends "test/index.html" %}
+
+{% block content %}
+
+    <div class="card text-center text-white bg-dark">
+      <div class="card-header">
+        {{title}}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ message }}</h5>
+        <p class="card-text">La contraseña mas corta es: {{ result }}</p>
+      </div>
+      <div class="card-footer ">
+        {{error}}
+      </div>
+    </div>
+
+
+{% endblock %}

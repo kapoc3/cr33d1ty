@@ -1,0 +1,19 @@
+﻿{% extends "test/index.html" %}
+
+{% block content %}
+
+    <div class="card text-center text-white bg-secondary">
+      <div class="card-header">
+        {{title}}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ message }}</h5>
+        <p class="card-text"> la cantidad de numeros es: {{ result }}</p>
+      </div>
+      <div class="card-footer">
+        By kapoc
+      </div>
+    </div>
+
+
+{% endblock %}
