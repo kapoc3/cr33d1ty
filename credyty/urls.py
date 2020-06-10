@@ -20,6 +20,9 @@ Class-based views
 from django.contrib import admin
 from django.urls import path
 from test import views as testview
+from crud.views import PostresListado, PostreDetalle, PostreCrear, PostreActualizar, PostreEliminar
+from django.conf import settings
+from django.conf.urls.static import static 
 
 urlpatterns = [
      path('', testview.index, name='index'),   
@@ -28,4 +31,11 @@ urlpatterns = [
      path('ejercicio3/', testview.ejercicio3, name='ejercicio3'),
      path('ejercicio4/', testview.ejercicio4, name='ejercicio4'),
      path('ejercicio5/', testview.ejercicio5, name='ejercicio5'),
+     path('admin/', admin.site.urls),
+     path('crud/', PostresListado.as_view(template_name = "crud/index.html"), name='crud'),
+     path('crud/details/<int:pk>', PostreDetalle.as_view(template_name = "crud/details.html"), name='details'),
+     path('crud/create', PostreCrear.as_view(template_name = "crud/create.html"), name='create'),
+     path('crud/update/<int:pk>', PostreActualizar.as_view(template_name = "crud/update.html"), name='update'), 
+     path('crud/delete/<int:pk>', PostreEliminar.as_view(), name='delete'),
+
 ]

@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'test'
+    'widget_tweaks',
+    'bootstrap4',
+    'test',
+    'crud', 
+    
 ]
 
 # Middleware framework
@@ -112,3 +116,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage' 
+
+MEDIA_URL = '/crud/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'crud/static/uploads')

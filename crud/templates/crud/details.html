@@ -1,0 +1,41 @@
+﻿{% extends "test/layout.html" %}
+
+{# Widget Tweaks #}
+{% load widget_tweaks %}
+
+{# Archivos #}
+{% load static %}
+
+
+{% block content %}
+
+ <div class="col-md-10">
+
+    <div class="table-responsive">
+
+        <nav aria-label="breadcrumb mb-3">
+        	<ol class="breadcrumb">
+        		<li class="breadcrumb-item"><a href="../">Postres</a></li>
+        		<li class="breadcrumb-item active" aria-current="page">Editar</a></li>
+        	</ol>
+        </nav>
+
+        <div class="formulario" align="left">
+            <h4>Detalles</h4>
+
+        	        <p><span class="txt_negrita">Nombre:</span> <br> {{object.nombre}}</p>
+        	        <p><span class="txt_negrita">Precio:</span> <br> {{object.precio}}</p>
+        	        <p><span class="txt_negrita">Stock:</span> <br> {{object.stock}}</p>
+        	        <p><span class="txt_negrita">Imagen:</span> <br> <img src="{% static 'uploads/'%}{{object.img}}" alt="{{object.nombre}}" class="img-fluid"> </p>
+        	        <p><span class="txt_negrita">Creado:</span> <br> {{object.created_at}}</p>
+        	        <p><span class="txt_negrita">Actualizado:</span> <br> {{object.updated_at}}</p>
+
+            <a href="../" type="submit" class="btn btn-primary">Volver</a>
+        </div>
+                
+    </div>
+
+</div>
+
+{% endblock %}
+
