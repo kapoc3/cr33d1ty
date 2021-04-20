@@ -29,7 +29,7 @@ numpy==1.18.5
 packaging==19.2
 pip==20.1.1
 pluggy==0.13.0
-py==1.8.0
+py==1.10.0
 Pygments==2.3.1
 PyHamcrest==1.9.0
 pylint==2.3.1
