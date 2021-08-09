@@ -37,7 +37,7 @@ pyparsing==2.4.2
 pypiwin32==223
 pytest==5.2.1
 pytz==2019.2
-pywin32==224
+pywin32==301
 requests==2.21.0
 setuptools==41.2.0
 six==1.12.0
