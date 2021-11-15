@@ -27,7 +27,7 @@ mccabe==0.6.1
 more-itertools==7.2.0
 numpy==1.18.5
 packaging==19.2
-pip==20.1.1
+pip==21.1
 pluggy==0.13.0
 py==1.8.0
 Pygments==2.3.1
